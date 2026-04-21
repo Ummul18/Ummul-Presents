@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ummul Presents</title>
+
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#fdf6f9;
+}
+
+header {
+  background: linear-gradient(135deg,#f8d7e3,#fceef4);
+  padding:20px;
+  text-align:center;
+}
+
+header h1 {
+  margin:0;
+  font-size:32px;
+  color:#8b5e73;
+}
+
+.urdu {
+  font-size:22px;
+  color:#a6788c;
+}
+
+nav {
+  text-align:center;
+  padding:10px;
+  background:#fff;
+}
+
+nav a {
+  margin:0 15px;
+  text-decoration:none;
+  color:#8b5e73;
+  font-weight:bold;
+}
+
+.hero {
+  text-align:center;
+  padding:50px 20px;
+}
+
+.hero h2 {
+  color:#8b5e73;
+}
+
+.products {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.card {
+  background:#fff;
+  border-radius:15px;
+  padding:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+.card img {
+  width:100%;
+  border-radius:10px;
+}
+
+.btn {
+  background:#d291bc;
+  color:white;
+  border:none;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.cart {
+  position:fixed;
+  top:10px;
+  right:10px;
+  background:#fff;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:#f8d7e3;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Ummul Presents</h1>
+  <div class="urdu">امُل پریزنٹس</div>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="cart">
+  🛒 Cart: <span id="cart-count">0</span>
+</div>
+
+<section class="hero">
+  <h2>Antique Style Cute Gifts 🎁</h2>
+  <p>Make memories beautiful & forever 💖</p>
+</section>
+
+<section class="products">
+
+<div class="card">
+  <img src="https://via.placeholder.com/200">
+  <h3>Custom Frame</h3>
+  <p>Rs.1500</p>
+  <button class="btn" onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="https://via.placeholder.com/200">
+  <h3>Couple Frame</h3>
+  <p>Rs.1800</p>
+  <button class="btn" onclick="addToCart()">Add to Cart</button>
+</div>
+
+</section>
+
+<section style="padding:20px; text-align:center;">
+  <h2>Checkout</h2>
+  <p>Payment Methods:</p>
+  <p>EasyPaisa | JazzCash | Bank Transfer</p>
+
+  <a href="https://wa.me/923058997763">
+    <button class="btn">Order on WhatsApp</button>
+  </a>
+</section>
+
+<footer>
+  <p>Follow us on Instagram</p>
+  <p>Contact: +923058997763</p>
+</footer>
+
+<script>
+let count = 0;
+function addToCart(){
+  count++;
+  document.getElementById("cart-count").innerText = count;
+}
+</script>
+
+</body>
+</html>
