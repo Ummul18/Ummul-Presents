@@ -5,163 +5,128 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ummul Presents</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-body {
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#fdf6f9;
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:#f4f6f8;
 }
 
-header {
-  background: linear-gradient(135deg,#f8d7e3,#fceef4);
-  padding:20px;
-  text-align:center;
+.hero{
+    background:linear-gradient(135deg,#ff4d6d,#ff8fa3);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
 }
 
-header h1 {
-  margin:0;
-  font-size:32px;
-  color:#8b5e73;
+.hero h1{font-size:40px;margin:0;}
+.hero p{font-style:italic;margin-top:10px;}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:20px;
 }
 
-.urdu {
-  font-size:22px;
-  color:#a6788c;
+.card{
+    background:white;
+    width:260px;
+    margin:15px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-nav {
-  text-align:center;
-  padding:10px;
-  background:#fff;
+.card:hover{transform:translateY(-6px);}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
 }
 
-nav a {
-  margin:0 15px;
-  text-decoration:none;
-  color:#8b5e73;
-  font-weight:bold;
+.card h3{text-align:center;margin:10px 0 5px;}
+.price{text-align:center;color:#ff4d6d;font-weight:bold;}
+
+.order{
+    display:block;
+    text-align:center;
+    background:#25D366;
+    color:white;
+    padding:10px;
+    margin:10px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.hero {
-  text-align:center;
-  padding:50px 20px;
+.footer{
+    text-align:center;
+    padding:30px;
+    font-style:italic;
+    color:#444;
 }
 
-.hero h2 {
-  color:#8b5e73;
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    font-size:28px;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
 }
-
-.products {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  padding:20px;
-}
-
-.card {
-  background:#fff;
-  border-radius:15px;
-  padding:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
-  text-align:center;
-}
-
-.card img {
-  width:100%;
-  border-radius:10px;
-}
-
-.btn {
-  background:#d291bc;
-  color:white;
-  border:none;
-  padding:10px;
-  margin-top:10px;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-.cart {
-  position:fixed;
-  top:10px;
-  right:10px;
-  background:#fff;
-  padding:10px;
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-footer {
-  text-align:center;
-  padding:20px;
-  background:#f8d7e3;
-}
-
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Ummul Presents</h1>
-  <div class="urdu">امُل پریزنٹس</div>
-</header>
-
-<nav>
-  <a href="#">Home</a>
-  <a href="#">Products</a>
-  <a href="#">Contact</a>
-</nav>
-
-<div class="cart">
-  🛒 Cart: <span id="cart-count">0</span>
+<div class="hero">
+    <h1>Ummul Presents</h1>
+    <p>تحفے محبت بڑھایا کرتے ہیں ❤️</p>
 </div>
 
-<section class="hero">
-  <h2>Antique Style Cute Gifts 🎁</h2>
-  <p>Make memories beautiful & forever 💖</p>
-</section>
+<div class="container">
 
-<section class="products">
+    <!-- PRODUCT 1 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+        <h3>Photo Frame</h3>
+        <p class="price">Rs 1200</p>
+        <a class="order" href="https://wa.me/923058997763?text=I want Photo Frame">Order on WhatsApp</a>
+    </div>
 
-<div class="card">
-  <img src="https://via.placeholder.com/200">
-  <h3>Custom Frame</h3>
-  <p>Rs.1500</p>
-  <button class="btn" onclick="addToCart()">Add to Cart</button>
+    <!-- PRODUCT 2 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde">
+        <h3>Gift Box</h3>
+        <p class="price">Rs 1500</p>
+        <a class="order" href="https://wa.me/923058997763?text=I want Gift Box">Order on WhatsApp</a>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4">
+        <h3>Custom Gift</h3>
+        <p class="price">Rs 2000</p>
+        <a class="order" href="https://wa.me/923058997763?text=I want Custom Gift">Order on WhatsApp</a>
+    </div>
+
 </div>
 
-<div class="card">
-  <img src="https://via.placeholder.com/200">
-  <h3>Couple Frame</h3>
-  <p>Rs.1800</p>
-  <button class="btn" onclick="addToCart()">Add to Cart</button>
+<div class="footer">
+    تحفے محبت بڑھایا کرتے ہیں ❤️
 </div>
 
-</section>
-
-<section style="padding:20px; text-align:center;">
-  <h2>Checkout</h2>
-  <p>Payment Methods:</p>
-  <p>EasyPaisa | JazzCash | Bank Transfer</p>
-
-  <a href="https://wa.me/923058997763">
-    <button class="btn">Order on WhatsApp</button>
-  </a>
-</section>
-
-<footer>
-  <p>Follow us on Instagram</p>
-  <p>Contact: +923058997763</p>
-</footer>
-
-<script>
-let count = 0;
-function addToCart(){
-  count++;
-  document.getElementById("cart-count").innerText = count;
-}
-</script>
+<a class="whatsapp" href="https://wa.me/923058997763" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
